@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
 
-  <arg name="model" />
+  <arg name="model" default="$(find saturnbot_description)/robot/saturnbot_astra.urdf.xacro" />
   <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
 
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
