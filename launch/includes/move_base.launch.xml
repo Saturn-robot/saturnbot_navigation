@@ -2,7 +2,8 @@
     ROS navigation stack with velocity smoother and safety (reactive) controller
 -->
 <launch>
-  <include file="$(find saturnbot_navigation)/launch/includes/velocity_smoother.launch.xml"/>
+  <!-- include file="$(find saturnbot_navigation)/launch/includes/velocity_smoother.launch.xml"/ -->
+  <include file="$(find saturnbot_navigation)/launch/includes/saturnbot_velocity_smoother.launch.xml"/>
   <!-- include file="$(find saturnbot_navigation)/launch/includes/safety_controller.launch.xml"/ -->
   
   <arg name="odom_frame_id"   default="odom"/>
