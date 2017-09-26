@@ -8,11 +8,11 @@ Panels:
         - /Status1
         - /Map1
         - /LaserScan1
-        - /LaserScan1/Status1
         - /Odometry1
         - /RobotModel1
         - /TF1
         - /Image1
+        - /Image1/Status1
       Splitter Ratio: 0.5
     Tree Height: 375
   - Class: rviz/Selection
@@ -222,7 +222,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/Image
       Enabled: true
-      Image Topic: /camera/depth/image_raw
+      Image Topic: /camera/rgb/image_raw
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -256,7 +256,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 8.13564
+      Distance: 17.9853
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
@@ -268,10 +268,10 @@ Visualization Manager:
         Z: 0
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.370398
+      Pitch: 1.5398
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.2854
+      Yaw: 1.5704
     Saved: ~
 Window Geometry:
   Displays:
