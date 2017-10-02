@@ -2,22 +2,22 @@
 #
 #  http://www.ros.org/wiki/move_base
 #
-shutdown_costmaps: false
+shutdown_costmaps: false # 此参数决定在move_base不活跃的状态下是否关闭代价地图
 
-controller_frequency: 5.0
-controller_patience: 3.0
+controller_frequency: 5.0 # move_base发送速度指令的频率，单位为Hz，即0.2秒发送一次速度指令
+controller_patience: 3.0 # controller在未收到有效控制指令的最长等待长时间，单位为秒，超过这个时间，controller后会进行空间清除操作 
 
 
-planner_frequency: 1.0
-planner_patience: 5.0
+planner_frequency: 1.0 # 执行全局路径规划循环的频率，相当于1秒进行一次全局路径规划
+planner_patience: 5.0 # planner在尝试找到一个有效的路径时的最长等待时间，单位是秒，超过这个时间，planner会进行空间清除操作
 
-oscillation_timeout: 10.0
-oscillation_distance: 0.2
+oscillation_timeout: 10.0 # move_base允许机器人抖动的最长时间，单位为秒，超过这个时间，move_base开始执行恢复行为
+oscillation_distance: 0.2 # 机器人被认为不是抖动行为的最小移动距离，单位为米，机器人每移动这个距离就会重置计时器的值为oscillation_timeout大小
 
 # local planner - default is trajectory rollout
-base_local_planner: "dwa_local_planner/DWAPlannerROS"
+base_local_planner: "dwa_local_planner/DWAPlannerROS" # 使用的局部路径规划器
 
-base_global_planner: "navfn/NavfnROS" #alternatives: global_planner/GlobalPlanner, carrot_planner/CarrotPlanner
+base_global_planner: "navfn/NavfnROS" # 使用的全局路径规划器，其它可选的全局路径规划器有: global_planner/GlobalPlanner, carrot_planner/CarrotPlanner
 
 
 #We plan to integrate recovery behaviors for turtlebot but currently those belong to gopher and still have to be adapted.
