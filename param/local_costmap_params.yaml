@@ -1,14 +1,14 @@
 local_costmap:
-   global_frame: odom
+   global_frame: /odom # /dom适用于精确的、短期的局部参考
    robot_base_frame: /base_footprint
-   update_frequency: 5.0
-   publish_frequency: 2.0
-   static_map: false
-   rolling_window: true
+   update_frequency: 5.0 # 局部代价地图的更新频率，单位为HZ
+   publish_frequency: 2.0 # 发布局部代价地图用于可视化的频率，单位为HZ
+   static_map: false # 不适用静态地图，局部代价地图通常都是根据实时的传感器信息进行更新的
+   rolling_window: true # 允许使用滚动窗口，机器人始终在滚动窗口的中央
    width: 4.0
    height: 4.0
    resolution: 0.05
-   transform_tolerance: 0.5
+   transform_tolerance: 0.5 # 允许没有收到global_frame和robot_base_frame之间的tf转换的最大时间，超过这个时间，机器人会被终止行动
    plugins:
     - {name: obstacle_layer,      type: "costmap_2d::VoxelLayer"}
     - {name: inflation_layer,     type: "costmap_2d::InflationLayer"}

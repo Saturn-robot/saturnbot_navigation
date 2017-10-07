@@ -1,10 +1,10 @@
 global_costmap:
-   global_frame: /map
+   global_frame: /map # /map适用于作为一个长期的全局参考
    robot_base_frame: /base_footprint
-   update_frequency: 1.0
-   publish_frequency: 0.5
-   static_map: true
-   transform_tolerance: 0.5
+   update_frequency: 1.0 # 全局代价地图的更新频率，单位为HZ
+   publish_frequency: 0.5 # 发布代价地图用于可视化的频率，单位为HZ
+   static_map: true # 允许使用静态地图
+   transform_tolerance: 0.5 # 允许没有收到global_frame和robot_base_frame之间的tf转换的最大时间，超过这个时间，机器人会被终止行动
    plugins:
      - {name: static_layer,            type: "costmap_2d::StaticLayer"}
      - {name: obstacle_layer,          type: "costmap_2d::VoxelLayer"}
