@@ -42,7 +42,7 @@ obstacle_layer:
 inflation_layer:
   enabled:              true # 允许使用膨胀层
   cost_scaling_factor:  5.0  # exponential rate at which the obstacle cost drops off (default: 10)
-  inflation_radius:     0.5  # 规划器在规划的路径离障碍物的距离代价；或者说障碍物的膨胀半径，规划器会在规划路径的时候视这些膨胀出来的部分为障碍物
+  inflation_radius:     0.3  # 规划器在规划的路径离障碍物的距离代价；或者说障碍物的膨胀半径，规划器会在规划路径的时候视这些膨胀出来的部分为障碍物
 
 static_layer:
   enabled:              true # 允许使用静态层（也就是用户预先生成的静态地图）
