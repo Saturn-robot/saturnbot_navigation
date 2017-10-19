@@ -1,13 +1,13 @@
 DWAPlannerROS:
 
 # Robot Configuration Parameters - Kobuki
-  max_vel_x: 0.5  # x方向上的最大速度，单位是米/秒
+  max_vel_x: 0.3  # x方向上的最大速度，单位是米/秒
   min_vel_x: 0.0  # x方向上的最小速度，负数表示后退，单位是米/秒
 
   max_vel_y: 0.0  # 差速控制机器人，不存在y轴 
   min_vel_y: 0.0  #  
 
-  max_trans_vel: 0.5 # choose slightly less than the base's capability
+  max_trans_vel: 0.3 # choose slightly less than the base's capability
   min_trans_vel: 0.1  # 机器人的最小平移速度的绝对值（当旋转速度可以忽略不计）
   trans_stopped_vel: 0.1
 
@@ -15,16 +15,16 @@ DWAPlannerROS:
   #   do not set min_trans_vel to 0.0 otherwise dwa will always think translational velocities
   #   are non-negligible and small in place rotational velocities will be created.
 
-  max_rot_vel: 5.0  # choose slightly less than the base's capability
-  min_rot_vel: 0.4  # this is the min angular velocity when there is negligible translational velocity
-  rot_stopped_vel: 0.4
+  max_rot_vel: 0.04  # choose slightly less than the base's capability
+  min_rot_vel: 0.02  # this is the min angular velocity when there is negligible translational velocity
+  rot_stopped_vel: 0.001
   
-  acc_lim_x: 1.0 #  
-  acc_lim_theta: 2.0
+  acc_lim_x: 0.5  
+  acc_lim_theta: 1.0
   acc_lim_y: 0.0      # 差速控制机器人，不存在y轴
 
 # Goal Tolerance Parameters
-  yaw_goal_tolerance: 0.3  # 0.05 # 与目标角度的误差大小，单位是弧度
+  yaw_goal_tolerance: 0.3  # 0.05 与目标角度的误差大小，单位是弧度
   xy_goal_tolerance: 0.15  # 0.10，与目标在x和y方向上的距离误差大小，单位是米
   # latch_xy_goal_tolerance: false # false， 如果此参数被设置，机器人会在他到达目标位置时进行简单的旋转，尽管可能不符合xy_goal_tolerance参数所指定的值
 
