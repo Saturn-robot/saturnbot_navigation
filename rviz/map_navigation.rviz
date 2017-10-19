@@ -94,7 +94,7 @@ Visualization Manager:
       Length: 1
       Name: Odometry
       Position Tolerance: 0.1
-      Topic: /output
+      Topic: /fused_odom
       Value: false
     - Alpha: 1
       Class: rviz/RobotModel
@@ -272,7 +272,7 @@ Visualization Manager:
       Pitch: 1.5698
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.26855
+      Yaw: 5.28855
     Saved: ~
 Window Geometry:
   Displays:
