@@ -189,6 +189,9 @@ Visualization Manager:
       Class: rviz/Path
       Color: 25; 255; 0
       Enabled: true
+      Head Diameter: 0.3
+      Head Length: 0.2
+      Length: 0.3
       Line Style: Lines
       Line Width: 0.03
       Name: Path
@@ -196,7 +199,12 @@ Visualization Manager:
         X: 0
         Y: 0
         Z: 0
-      Topic: /move_base/DWAPlannerROS/global_plan
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.03
+      Shaft Diameter: 0.1
+      Shaft Length: 0.1
+      Topic: /move_base/NavfnROS/plan
       Unreliable: false
       Value: true
     - Alpha: 0.7
@@ -284,5 +292,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1301
-  X: 65
+  X: 1985
   Y: 24
