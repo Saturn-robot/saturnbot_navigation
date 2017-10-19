@@ -10,7 +10,7 @@
   <arg name="base_frame_id"   default="base_footprint"/>
   <arg name="global_frame_id" default="map"/>
   <!-- original value of odom_topic is "odom", we set it as "output" which is processed from original "odom" -->
-  <arg name="odom_topic" default="output" />
+  <arg name="odom_topic" default="fused_odom" />
   <arg name="laser_topic" default="scan" />
   <arg name="custom_param_file" default="$(find saturnbot_navigation)/param/dummy.yaml"/>
 
