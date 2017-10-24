@@ -9,7 +9,7 @@
   <!-- arg name="smooth_cmd_vel_topic"  value="navigation_velocity_smoother/smooth_cmd_vel"/ -->
   <arg name="smooth_cmd_vel_topic"  value="/cmd_vel"/>
   <arg name="robot_cmd_vel_topic"   value="navigation_velocity_smoother/robot_cmd_vel"/>
-  <arg name="odom_topic"            value="output"/>
+  <arg name="odom_topic"            value="fused_odom"/>
   
   <!-- nodelet manager -->
   <node pkg="nodelet" type="nodelet" name="$(arg nodelet_manager_name)" args="manager"/>
