@@ -12,6 +12,7 @@
     <param name="publish_frequency" type="double" value="50.0" />
   </node>
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find saturnbot_navigation)/rviz/map_navigation.rviz"/>
+  <!-- node name="rviz" pkg="rviz" type="rviz" args="-d $(find saturnbot_navigation)/rviz/map_navigation.rviz"/ -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find saturnbot_navigation)/rviz/map_navigation_test.rviz"/>
 
 </launch>
